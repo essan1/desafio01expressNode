@@ -39,7 +39,7 @@ app.get("/abracadabra/conejo/:n", (req, res) => {
 });
 
 //validar con middleware
-//validando que lo que esta en la ruta/direccion este en el array
+//validando que el nombre que esta en la ruta/direccion este en el array
 app.get("/abracadabra/juego/:usuario", (req, res, next) => {
   const userName = req.params.usuario // capturamos x ruta dinamica
   const user = usuarios.map((u) => u.toLowerCase()).includes(userName.toLowerCase());
