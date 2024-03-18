@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-// declaramos la carpeta assets como publica. puede ser sin el primer "./assets" app.use(express.static('assets'));
+// declaramos la carpeta assets como publica.
 app.use(express.static("assets"));
 
 // arreglo nombre users para llamar al json
@@ -53,7 +53,7 @@ app.get('/abracadabra/juego/:usuario', (req, res) => {
 
 //------------------------------------------------------
 
-//ruta geenerica * error 404, al final.. SIEMPRE AL FINAL
+//ruta geenerica * error 404, al final
 app.get("*", (req, res) => {
   res.send("<center><h1>📍ERROR 404: Esta pagino no existe📍</h1></center>");
 });
